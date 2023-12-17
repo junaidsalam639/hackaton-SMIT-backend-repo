@@ -1,11 +1,12 @@
 const express = require('express');
 const app = express();
-const cors = require('cors');
 const mongoose  = require('mongoose');
 const route  = require('./Model/user');
 const sendResponse = require('./helpers/sendReponse');
-app.use(cors());
+const cors = require('cors');
+
 app.use(express.json());
+app.use(cors());
 app.use('/addStudent' , route);
 
 mongoose.connect('mongodb+srv://junaidsalam639:hackaton@cluster0.t6urvdj.mongodb.net/').then(()=>{
