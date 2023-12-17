@@ -7,7 +7,7 @@ const cors = require('cors');
 
 app.use(express.json());
 app.use(cors());
-app.use('/addStudent' , route);
+app.use('/addstudent' , route);
 
 mongoose.connect('mongodb+srv://junaidsalam639:hackaton@cluster0.t6urvdj.mongodb.net/').then(()=>{
     console.log('mongodb connect');
@@ -16,13 +16,12 @@ mongoose.connect('mongodb+srv://junaidsalam639:hackaton@cluster0.t6urvdj.mongodb
 })
 
 
-
 app.get('/' , (req , res) => {
     sendResponse(res, 200, 'mongodb and mongoose connected', false);
 })
 
 
-app.listen(3000 , () => {
+app.listen(8000 , () => {
     console.log('App is running on port 3000');
 });
 
