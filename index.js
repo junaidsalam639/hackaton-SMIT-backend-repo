@@ -1,13 +1,10 @@
 const express = require('express');
 const app = express();
 const mongoose  = require('mongoose');
-const route  = require('./Model/user');
-const sendResponse = require('./helpers/sendReponse');
 const cors = require('cors');
 
 app.use(express.json());
 app.use(cors());
-app.use('/addstudent' , route);
 
 mongoose.connect('mongodb+srv://junaidsalam639:hackaton@cluster0.t6urvdj.mongodb.net/').then(()=>{
     console.log('mongodb connect');
@@ -17,7 +14,7 @@ mongoose.connect('mongodb+srv://junaidsalam639:hackaton@cluster0.t6urvdj.mongodb
 
 
 app.get('/' , (req , res) => {
-    sendResponse(res, 200, 'mongodb and mongoose connected', false);
+    res.send('Hello World');
 })
 
 
