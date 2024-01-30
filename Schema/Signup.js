@@ -16,9 +16,9 @@ const signupSchema = new Schema({
         type: String,
         required: true
     }
-});
+}, {timestamps : true});
 
-const Signup = mongoose.model('signup', signupSchema);
+const Signup = mongoose.model('signups', signupSchema);
 module.exports = Signup
 
 

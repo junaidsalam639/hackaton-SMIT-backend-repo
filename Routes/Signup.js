@@ -14,7 +14,7 @@ route.get('/', async (req, res) => {
     }catch(err){
         console.log(err);
     }
-})
+});
 
 route.get('/:id', async (req, res) => {
     const signup = await Signup.findById(req.params.id);
@@ -26,7 +26,7 @@ route.get('/:id', async (req, res) => {
     }catch(err){
         console.log(err);
     }
-})
+});
 
 route.post('/', async (req, res) => {
     try{
@@ -38,7 +38,7 @@ route.post('/', async (req, res) => {
     }catch(err){
         console.log(err);
     }
-})
+});
 
 
 route.post('/login', async (req, res) => {
@@ -63,7 +63,7 @@ route.post('/login', async (req, res) => {
     }catch(err){
         console.log(err);
     }
-})
+});
 
 
 route.put('/:id', async (req, res) => {
@@ -77,7 +77,7 @@ route.put('/:id', async (req, res) => {
     }catch(err){
         console.log(err);
     }
-})
+});
 
 
 route.delete('/:id', async (req, res) => {
@@ -90,7 +90,7 @@ route.delete('/:id', async (req, res) => {
     }catch(err){
         console.log(err);
     }
-})
+});
 
 
 
